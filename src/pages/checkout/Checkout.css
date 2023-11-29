@@ -1,0 +1,49 @@
+.checkout-container {
+  width: 75vw;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.checkout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.checkout > * {
+  background-color: #e4ddd4;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  width: 50%;
+  height: 70vh;
+  overflow: auto;
+  color: #1d1a16;
+}
+
+.checkout > .cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.checkout-btn {
+  font: "Raleway", sans-serif;
+  font-size: 1.25rem;
+  cursor: pointer;
+  background-color: #ffc404;
+  border: 1px solid #ffc404;
+  color: #1f1a09;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  width: 70%;
+}
+
+.checkout-btn:hover,
+.checkout-btn:active {
+  background-color: #ffab04;
+  border-color: #ffab04;
+  color: #1f1a09;
+}

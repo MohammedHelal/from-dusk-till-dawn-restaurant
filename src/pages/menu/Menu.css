@@ -1,0 +1,55 @@
+.menu-link-items {
+  font-size: 1.5rem;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: #ffab04;
+  cursor: pointer;
+}
+
+.menu-link-items::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #ffab04;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.menu-link-items::after {
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.menu-link-items:hover::after,
+.menu-link-items:focus::after {
+  transform: scale(1);
+}
+
+/*
+a:hover::after,
+a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+ Slide in 
+li:nth-child(2) a {
+  overflow: hidden;
+}
+
+li:nth-child(2) a::after {
+  opacity: 1;
+  transform: translate3d(-100%, 0, 0);
+}
+
+li:nth-child(2) a:hover::after,
+li:nth-child(2) a:focus::after {
+  transform: translate3d(0, 0, 0);
+}*/
+
+/* Scale from center */

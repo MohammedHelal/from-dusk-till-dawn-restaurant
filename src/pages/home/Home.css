@@ -1,0 +1,177 @@
+.home-heading {
+  width: 100vw;
+  height: 120vh;
+  background-image: url("./src/assets/landing-image.jpg");
+  background-size: contain;
+  box-shadow: 0 0 18px 18px #00000d inset;
+}
+
+.heading {
+  display: block;
+  position: relative;
+  width: 100vw;
+  padding-top: 50px;
+  animation: fade-in-heading 2s ease-in;
+}
+
+.title {
+  font-family: "Dancing Script", garamond;
+  font-size: 4rem;
+  margin-top: 100px;
+  position: absolute;
+  left: calc(50% - 18rem);
+}
+
+.round-img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #ffc404;
+}
+
+.heading > img {
+  position: absolute;
+  left: calc(50% - 5rem);
+}
+
+.fancy {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 50px;
+  position: relative;
+  top: 65vh;
+  animation: fade-in-intro 1s ease-out;
+}
+
+.big-h2 {
+  font-family: Garamond;
+  font-size: 4rem;
+  font-weight: 400;
+  width: 60vw;
+  margin-bottom: 0;
+}
+
+.fancy > button {
+  font-family: "Dancing Script", garamond;
+  font-size: 4rem;
+  font-style: italic;
+  padding: 5px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.fancy > button > a {
+  color: #ffab04;
+}
+
+.fancy > button > a > span {
+  display: inline-block;
+  font-weight: 600;
+}
+
+.fancy > button:hover > a > span {
+  animation: fade-in-menu 0.5s ease-out;
+}
+
+.fancy > button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #ffab04;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.fancy > button::after {
+  opacity: 1;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.fancy > button:hover::after,
+.fancy > button:focus::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.intro-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 75vw;
+  margin: 100px auto;
+}
+
+.intro-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  font-family: garamond;
+  width: 30%;
+}
+
+.intro-item > .round-img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ffc404;
+}
+
+.intro-item > h2 {
+  font-size: 2.5rem;
+}
+
+.intro-item > p {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.button-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.button-flex > button {
+  font-size: 2.5rem;
+  padding: 10px 50px;
+  border-radius: 25px;
+}
+
+@keyframes fade-in-heading {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-intro {
+  from {
+    opacity: 0;
+    transform: translateX(-100rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-menu {
+  from {
+    transform: translateX(-16rem) scale(3, 3);
+    color: rgb(164, 48, 48);
+  }
+
+  to {
+    transform: translateX(0) scale(1, 1);
+    color: #ffc404;
+  }
+}
