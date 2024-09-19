@@ -36,10 +36,10 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/", 
-      errorElement: <ErrorPage />, 
+      path: "/",
+      errorElement: <ErrorPage />,
       children: [
-        {index: true, element: <Home />},
+        { index: true, element: <Home /> },
         {
           path: "/menu",
           element: <RootLayout />,
@@ -49,8 +49,9 @@ function App() {
             { path: "checkout", element: <Checkout /> },
           ],
         },
-      ]
+      ],
     },
+    { basename: "/from-dusk-till-dawn-restaurant/" },
   ]);
 
   return (
